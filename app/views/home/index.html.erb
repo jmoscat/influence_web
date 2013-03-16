@@ -1,9 +1,13 @@
-<h1>Homepage</h1>
+<center>
+<%= link_to(image_tag("logo.png"), "http://thanxup.com") %>
+<h3> Lets calculate your influence! </h3>
 
 <ul>
 <% flash.each do |key, msg| %>
-  <%= content_tag :li, msg, id: key %>
+ <center> <div> Your facebook influence according to Thanxup is <font color="#ff6e00"><b><%=msg%>%</b></font></div></center>
 <% end %>
 </ul>
 
 <p><%= link_to 'Sign in with Facebook', signin_path %></p>
+
+</center>
