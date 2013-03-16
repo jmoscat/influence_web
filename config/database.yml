@@ -1,23 +1,15 @@
 development:
-  adapter: mysql2
+  adapter: postgresql
+  encoding: unicode
   database: influence_dev
-  username: root
-  password: 1Keyword1
-  host: localhost
-  encoding: utf8
+  pool: 5
+  username: jmoscat
+  password: 
 
 test:
-  adapter: mysql2
+  adapter: postgresql
+  encoding: unicode
   database: influence_test
-  username: root
-  password: 1Keyword1
-  host: localhost
-  encoding: utf8
-  collation: utf8_general_ci
-
-production:
-  adapter: mysql2
-  database: influence_prod
-  username: root
-  password: 1Keyword1
-  host: localhost
+  pool: 5
+  username: jmoscat
+  password:

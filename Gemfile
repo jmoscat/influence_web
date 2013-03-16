@@ -7,7 +7,7 @@ gem 'rails', '3.2.2'
 
 gem 'devise'
 gem 'omniauth-facebook'
-gem 'mysql2'
+gem 'pg'
 gem 'koala'
 
 
