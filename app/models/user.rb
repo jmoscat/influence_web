@@ -6,7 +6,6 @@ class User < ActiveRecord::Base
 	    if auth['info']
 	      user.name = auth['info']['name'] || ""
 	      user.email = auth['info']['email'] || ""
-	      user.fb_token = auth['credentials']['token']
 	    end
 	  end
 	end

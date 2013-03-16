@@ -4,6 +4,7 @@ class SessionsController < ApplicationController
 	  user = User.where(:provider => auth['provider'], 
 	                    :uid => auth['uid']).first || User.create_with_omniauth(auth)
 	  session[:user_id] = user.id
+	  user.fb_token = auth['credentials']['token']
 	  influence = user.calculate_influence
 	  message = influence.to_s + "%"
 	  redirect_to root_url, :notice => influence.to_s
